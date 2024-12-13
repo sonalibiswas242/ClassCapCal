@@ -1,68 +1,201 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Navigation Bar */
+/* Navigation Bar */
+.navbar {
+  width: 100vw;
+  height: 60px;
+  background: #0056b3; /* Deep blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Navbar Content */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and title */
+}
+
+/* Menu Icon */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px; /* Add small space between icon and title */
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Center the Container */
+.container.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal centering */
+  justify-content: center; /* Vertical centering */
+  width: 100%; /* Full width */
+  max-width: 600px; /* Card width */
+  height: auto; /* Dynamic height */
   padding: 2rem;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 80px auto; /* Adjust for navbar */
+  min-height: 400px; /* Reduced minimum height */
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Tagline Styling */
+.tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 2rem 0;
+  color: #ffcc00; /* Gold */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Upload Section */
+.upload-section input[type="file"] {
+  padding: 15px;
+  border: 2px solid #d3d3d3; /* Light grey border */
+  border-radius: 10px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+  font-size: 16px;
+  color: white;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.upload-section input[type="file"]:hover {
+  border-color: #b0b0b0; /* Slightly darker grey on hover */
+  background: rgba(255, 255, 255, 0.3); /* Slightly brighter background */
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #4caf50;
+.upload-section input[type="file"]::file-selector-button {
+  padding: 10px;
+  background: #0056b3; /* Deep blue background for the button */
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.upload-section input[type="file"]::file-selector-button:hover {
+  background: #003d80; /* Darker blue on hover */
 }
 
-img {
-  margin-top: 20px;
-  border: 2px solid #ddd;
+
+/* Image Display */
+.image-display {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.image-wrapper {
+  text-align: center;
+}
+
+.image-wrapper h3 {
+  color: #ffcc00;
+}
+
+.image {
+  max-width: 300px;
+  border: 3px solid white;
   border-radius: 5px;
 }
 
+/* Button Styles */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0056b3; /* Deep blue */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #003d80; /* Darker blue */
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Results Text */
+.results-text {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #ffcc00;
+}
+
+/* Sidebar Styling */
+.side-menu {
+  position: fixed;
+  top: 60px; /* Below navbar */
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(180deg, #4B0082, #1c1c1c); /* Gradient effect */
+  color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease; /* Smooth opening animation */
+  transform: translateX(0); /* Ensure it slides in */
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  padding: 15px 20px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background for items */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.side-menu ul li:hover {
+  background: #ffcc00; /* Gold background on hover */
+  color: black; /* Text color changes on hover */
+  transform: translateX(10px); /* Slight "push" effect */
+}
+
+.side-menu ul li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Full-screen Background */
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://source.unsplash.com/1600x900/?abstract,technology') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
