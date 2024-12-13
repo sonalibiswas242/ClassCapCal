@@ -10,9 +10,7 @@ ClassCapCounter is a face detection-based web application that automates classro
 3. [Installation](#installation)  
 4. [Usage](#usage)  
 5. [Technologies Used](#technologies-used)  
-6. [Contributing](#contributing)  
-7. [License](#license)  
-8. [Contact](#contact)
+
 
 ---
 
